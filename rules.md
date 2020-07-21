@@ -20,6 +20,8 @@ How about this:
 - the object is to get nine points, the number of points you get is the number of poles lit in the correct color, when you sink the balls.
 - you would typically play a uneven number of rounds to determine a winner, like best out of three. This would allow for heavy betting.
 
+![set of balls](https://raw.githubusercontent.com/HjalmarSnoep/MG-dom-jot/master/Dom_jot_balls_-_It%2527s_a_Wrap.jpg)
+
 ## proposed rules 3
 Could be two sets of red, green and blue balls, there is a slight color difference that would allow players to keep track of their balls.
 And a loose yellow purple orange and cyan ball. These could be the scoring balls, numbering 1,2,4 and 8 points.
