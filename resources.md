@@ -5,8 +5,8 @@ Credits for finding most infor go to https://memory-alpha.fandom.com/wiki/Dom-jo
 TNG: "Tapestry"
 DS9: "The Abandoned", "Doctor Bashir, I Presume",  "Life Support",  "Little Green Men", "Shattered Mirror" "The Ascent", "The Visitor"
 
-![alt text](image.png)
-![alt text](image.png)
+![table layout](https://raw.githubusercontent.com/HjalmarSnoep/MG-dom-jot/master/Rick_Sternbach_dom_jot_table_design.jpg)
+![set of balls](https://raw.githubusercontent.com/HjalmarSnoep/MG-dom-jot/master/Dom_jot_balls_-_It%2527s_a_Wrap.jpg)
 
 ## Facts: 
 - The ball is called the terik.
