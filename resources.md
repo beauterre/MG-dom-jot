@@ -5,6 +5,9 @@ Credits for finding most infor go to https://memory-alpha.fandom.com/wiki/Dom-jo
 TNG: "Tapestry"
 DS9: "The Abandoned", "Doctor Bashir, I Presume",  "Life Support",  "Little Green Men", "Shattered Mirror" "The Ascent", "The Visitor"
 
+![alt text](image.png)
+![alt text](image.png)
+
 ## Facts: 
 - The ball is called the terik.
 - Dom-jot was also available in a computerized form. Jake played such a version of the game on a PADD in 2373. (DS9: "The Ascent")
