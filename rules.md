@@ -33,3 +33,4 @@ The one who has the most points then wins, a score of exactly 9 is doubled. So a
 This would make for some interesting strategics.
 I don´t know if it would be practical to keep track of the slightly different colors in "real life" but it wouldn´t be a problem for a computer game.
 We might put a little dot on one set.
+Only problem with this is, we´d have to figure out how the balls start on the table and fit in the marked areas.. This is no problem with set 2.
