@@ -17,7 +17,7 @@ How about this:
 - the pins light up in the color of the balls. They have a base color of themselves (non-lit)
 - your cue ball is the color of the last pin you lit up, or yellow.
 -all balls start in the hexagonal area 12321, except yellow, which is the color for the first player. This ball starts behind the hooked line at the far end. This would allow for a kind of ´break´
-- the object is to get nine points, the number of points you get is the number of poles lit in the correct color, when you sink the balls.
+- the object is to get nine points, the number of points you get is the number of poles lit in the correct color, when you sink any of the balls (even your cueball, since to score it would have to hit a pin first).
 - you would typically play a uneven number of rounds to determine a winner, like best out of three. This would allow for heavy betting.
 
 ![set of balls](https://raw.githubusercontent.com/HjalmarSnoep/MG-dom-jot/master/Dom_jot_balls_-_It%2527s_a_Wrap.jpg)
