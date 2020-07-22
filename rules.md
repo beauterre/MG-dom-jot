@@ -14,9 +14,9 @@ If a player sinks all his balls but one and then the opponent deactivates a post
 I see only one hole in the table. And 10 balls total, not all of which are doubled in color.
 But I like the idea of two players, hitting each other´s pins.
 How about this:
-- the pins light up in the color of the balls that hit them. They have a base color of themselves (non-lit)
-- after a turn, if one or more balls is sunk, the pins go out..
-- your next cue ball is the last ball to be stop moving on the table.
+- the pins light up or go out if any ball hits them
+- after a turn, if one or more balls is sunk, the pins go out.. The player whose turn it was gets the points.
+- your next cue ball is the last ball to stop moving on the table. (only when playing Bajoran rules :)
 - if a player fails to sink any ball, the other player gets the turn.
 - all balls start in the hexagonal area 12321, except yellow, which is the cueball for the first player. 
   This ball starts behind the hooked line at the far end. This would allow for a kind of ´break´
@@ -24,13 +24,14 @@ How about this:
 - you would typically play a uneven number of rounds to determine a winner, like best out of three. This would allow for heavy betting.
 - hitting straight nines could mean you would hit 9 pins in the situation of all pins having just gone out, because you sunk a ball. before sinking each ball, getting a large amount of points. (Theoretically a 10 is possible, but one pin is an outlier, so that makes it really hard if not impossible with the power of the cues being electronically regulated)
 - the game is finished when all balls are of the table.
-- the colors of the balls, except can denote different multiplication factors.
+- With Ferengi rules, the colors of the balls, can denote different multiplication factors.
 Yellow: 0
 Red: 1
 BLue: 2
 green: 3
 other colors: 4,5,6,7
 - sinking more than one ball at a time might give you a truly spectacular score.
+- cheating might involve an aiming device on the cue.. Or luck, like in Peggle.
 
 ![set of balls](https://raw.githubusercontent.com/HjalmarSnoep/MG-dom-jot/master/Dom_jot_balls_-_It%2527s_a_Wrap.jpg)
 
