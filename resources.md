@@ -1,5 +1,5 @@
-## Where we can find Dom-Jot
-Credits for finding most infor go to https://memory-alpha.fandom.com/wiki/Dom-jot
+# Where we can find Dom-Jot
+Credits for finding most info goes to https://memory-alpha.fandom.com/wiki/Dom-jot
 
 ## Mentions/Footage of Dom-Jot
 TNG: "Tapestry"
@@ -15,4 +15,7 @@ DS9: "The Abandoned", "Doctor Bashir, I Presume",  "Life Support",  "Little Gree
 - Playing surface is not green
 - the playing surface as being made out of felt with rubber bumper strips covered with felt around the outside of the table 
 - the table was held up by three "V"-shaped legs. 
+
+## The game in play
+![screenshots](https://github.com/HjalmarSnoep/MG-dom-jot/blob/master/domjot-screenshots.png?raw=true)
 
