@@ -132,8 +132,11 @@ function step()
     var dir=getDirectionPixel(balls[i].x,balls[i].y);
     if(dir.a>128)
     {
+        // you hit a static wall, bounce of it in the right direction by reflecting the vector and adding some friction.
+        // first we take a little step back, since presumeable you weren´t "in" a wall last step.
       balls[i].x-=balls[i].dx;
       balls[i].y-=balls[i].dy;
+      
       console.log(dir);
       console.log("hit a wall with direction: "+dir.dx+"/"+dir.dy);
     }
