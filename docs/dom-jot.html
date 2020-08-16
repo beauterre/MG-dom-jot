@@ -12,10 +12,125 @@
       width: 100%;
     }
   </style>
-</head>
-<body>
-<img id="table" src="dom-jot.png">
-  <script src="dom-jot.js">
-  </script>
+</head><body>
+<canvas id="game" width="640" height="480">
+  
+</canvas>
+<img id="table" src="dom-jot.png" width="824" height="702">
+<script>
+var canvas=document.getElementById("game");
+var ctx=canvas.getContext("2d");
+var game={status: "running",w:640,h:480,step:5,friction:0.995,collision_friction:0.99};
+
+// model
+var balls=[],ball_radius=20;
+var pins=[],pin_radius=8;
+var walls=[];
+
+for( var i=0;i<10;i++)
+{
+  balls.push({x:300,y:100+i*ball_radius*2,dx:(-0.5+Math.random())*10,dy:(-0.5+Math.random())*10});
+}
+
+loop();
+
+function calcBallSpeed(ball)
+{
+    ball.speed=Math.sqrt(ball.dx*ball.dx+ball.dy*ball.dy);
+}
+function step()
+{
+  var i,j,dx,dy,len,step_friction=Math.pow(game.friction,1/game.step),totalspeed=0,speed_after_collision;
+  for(i=0;i<balls.length;i++)
+  {
+    calcBallSpeed(balls[i]);
+    totalspeed+=balls[i].speed;
+  }
+  if(totalspeed<=0.1)
+  {
+    game.status="wait-input";
+    console.log("done");
+  }
+  for(i=0;i<balls.length;i++)
+  {
+    balls[i].x+=balls[i].dx/game.step;
+    balls[i].y+=balls[i].dy/game.step;
+    
+    // friction
+    balls[i].dx*=step_friction;
+    balls[i].dy*=step_friction;
+    
+    // restrict to game space for testing only.
+    if(balls[i].x<ball_radius) balls[i].dx=Math.abs(balls[i].dx);
+    if(balls[i].y<ball_radius) balls[i].dy=Math.abs(balls[i].dy);
+    if(balls[i].x>game.w-ball_radius) balls[i].dx=-Math.abs(balls[i].dx);
+    if(balls[i].y>game.h-ball_radius) balls[i].dy=-Math.abs(balls[i].dy);
+    
+    
+    // ball self intersection restraint.
+    for(j=0;j<balls.length;j++)
+    {
+      if(i!=j)
+      {
+        dx=balls[j].x-balls[i].x;
+        dy=balls[j].y-balls[i].y;
+        len=Math.sqrt(dx*dx+dy*dy);
+        if(len<ball_radius*2)
+        {
+          totalspeed=balls[i].speed+balls[j].speed;
+          balls[i].dx-=totalspeed*dx/len/10;
+          balls[i].dy-=totalspeed*dy/len/10;
+          balls[j].dx+=totalspeed*dx/len/10;
+          balls[j].dy+=totalspeed*dy/len/10;
+          calcBallSpeed(balls[i]);
+          calcBallSpeed(balls[j]);
+          speed_after_collision=balls[i].speed+balls[j].speed;
+          speed_correction=game.collision_friction*totalspeed/speed_after_collision;
+          balls[i].dx=balls[i].dx*speed_correction;
+          balls[i].dy=balls[i].dy*speed_correction;
+          balls[i].speed=balls[i].speed*speed_correction;
+          balls[j].dx=balls[j].dx*speed_correction;
+          balls[j].dy=balls[j].dy*speed_correction;
+          balls[j].speed=balls[j].speed*speed_correction;
+        }
+      }
+    }
+    
+  }
+}
+function render()
+{
+  ctx.clearRect(0,0,game.w,game.h);
+  var i;
+  for(i=0;i<balls.length;i++)
+  {
+    ctx.beginPath();
+    ctx.arc(balls[i].x,balls[i].y,ball_radius,0,Math.PI*2);
+    ctx.stroke();
+  }
+}
+function loop()
+{
+  var i;
+  for(i=0;i<game.step;i++)
+  {
+    step();
+  }
+  render();
+  if(game.status=="running")
+  {
+    window.requestAnimationFrame(loop);
+  }else
+  {
+    // apply neew power to one of the balls.
+    balls[0].dx=10;
+    balls[0].dy=5;
+    game.status="running";
+    window.requestAnimationFrame(loop);
+  }
+}
+
+
+</script>
 </body>
 </html>
